@@ -14,6 +14,8 @@ $(document).ready(function() {
     
     // El document .on es para que los eventos se creen en los elementos que se crean dinamicamente
     //  y no solo en los que estan en la vista que se carga al principio
+
+    // Botones de la barra de navegacion
     $(document).on("click", "#mujer", function() {
         changeCategories("Mujer");
     });
@@ -38,6 +40,8 @@ $(document).ready(function() {
         vista.main();
     });
 
+    // Botones de la vista de productos
+
     $(document).on("click", ".link-imagen", function() {
         var id = $(this).siblings("#input-producto").val();
         changeSingleProduct(id);
@@ -47,6 +51,8 @@ $(document).ready(function() {
         var id = $(this).parent().siblings("#input-producto").val();
         changeSingleProduct(id);
     });
+
+    // Botones de la vista carrito
 
     $(document).on("click", ".fa-cart-shopping", function() {
         vista.cart(cart);
@@ -66,12 +72,18 @@ $(document).ready(function() {
         eliminarCarrito(id);
     });
 
+    // Botones de la vista de login y registro
+
     $(document).on("click", ".fa-user", function() {
         vista.login();
     });
 
     $(document).on("click", "#registro-link", function() {
         vista.register();
+    });
+
+    $(document).on("click", "#login-link", function() {
+        vista.login();
     });
 
     $(document).on("click", ".login-button", function() {
@@ -116,6 +128,8 @@ $(document).ready(function() {
             .then(json=>register(json))
 
     });
+
+    // Botones descender y ascender y actualizar cantidad
 
     $(document).on("click", ".sort-button", function() {
         var sort = $(this).siblings("#sort").val();

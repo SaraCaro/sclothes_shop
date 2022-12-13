@@ -124,16 +124,16 @@ export class Vista{
         if (type == "Todos") {
             type = "Todos los productos";
         }
-        else if(type == "woman"){
+        else if(type == "mujer"){
             type = "Mujer";
         }
-        else if(type == "men"){
+        else if(type == "hombre"){
             type = "Hombre";
         }
-        else if(type == "jewelry"){
+        else if(type == "joyeria"){
             type = "Joyería";
         }
-        else if(type == "electronics"){
+        else if(type == "electronica"){
             type = "Electrónica";
         }
 
@@ -288,7 +288,7 @@ export class Vista{
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password">
                     </div>
-                    <p id="registro-link">¿No tienes una cuenta? Registrate aqui</p>
+                    <p id="registro-link">¿No tienes una cuenta? <span>Registrate aqui</span></p>
                     <button class="login-button">Iniciar sesión</button>
                 </form>
             </div>
@@ -318,6 +318,7 @@ export class Vista{
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password">
                     </div>
+                    <p id="login-link">¿Ya tienes cuenta? <span>Iniciar Sesión</span></p>
                     <button class="register-button">Registrarse</button>
                 </form>
             </div>
