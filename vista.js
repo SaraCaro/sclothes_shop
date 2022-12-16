@@ -100,8 +100,13 @@ export class Vista{
         return `
         <header>
             <img src="img/logo.png" alt="Logo" id="logo">
-
+            
             <nav>
+                <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                </div>
                 <ul class="menu">
                     <li><a id="mujer">Mujer</a></li>
                     <li><a id="hombre">Hombre</a></li>
@@ -242,6 +247,8 @@ export class Vista{
                 <h1>Carrito</h1>
             </div>
             <div class="cart-container">
+                <ul class="cart-list">
+                </ul>
             </div>
             <div class="cart-total">
                 <h3 id="precioTotal"></h3>
@@ -252,22 +259,22 @@ export class Vista{
 
         cart.forEach(item => {
             $(".cart-container").append(`
-            <div class="cart-item">
-                <input type="hidden" value="${item.id}" id="input-producto">
-                <img src="${item.image}" alt="">
-                <div class="cart-item-text">
+                <li>
+                    <input type="hidden" value="${item.id}" id="input-producto">
+                    <img src="${item.image}" alt="">
+                    <div class="cart-item-text">
                     <h3>${item.title}</h3>
                     <p class="price">$${item.price}</p>
                     <input type="number" value="${item.quantity}" class="quantity" data-id="${item.id}">
                     <button class="update-button" data-id="${item.id}">Actualizar</button>
                     <button class="delete-button" data-id="${item.id}">Eliminar</button>
-                </div>
+                </li>
             </div>
             `)
             total += item.price*item.quantity;
         });
 
-        $("#precioTotal").html(`Total: $${total}`);
+        $("#precioTotal").html(`Total: $${total=total.toFixed(2)}`);
     }
 
     login() {
@@ -281,8 +288,8 @@ export class Vista{
             <div class="login-container">
                 <form action="" id="login-form">
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
+                        <label for="username">Usuario</label>
+                        <input type="text" name="username" id="username">
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>
@@ -307,6 +314,10 @@ export class Vista{
             <div class="register-container">
                 <form action="" id="register-form">
                     <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" name="name" id="name">
                     </div>
@@ -320,6 +331,7 @@ export class Vista{
                     </div>
                     <p id="login-link">¿Ya tienes cuenta? <span>Iniciar Sesión</span></p>
                     <button class="register-button">Registrarse</button>
+                    <p id="signup-message">Te has registrado correctamente</p>
                 </form>
             </div>
         </section>

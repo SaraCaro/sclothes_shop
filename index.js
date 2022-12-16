@@ -223,7 +223,7 @@ function login(json){
 
 function register(json){
     if(json.id == 1 || json.id == 11){
-        $("#signup--message").show(200);
+        $("#signup-message").show(200);
     }
 }
 
