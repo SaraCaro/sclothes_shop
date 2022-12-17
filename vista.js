@@ -102,10 +102,12 @@ export class Vista{
             <img src="img/logo.png" alt="Logo" id="logo">
             
             <nav>
-                <div class="hamburger-lines">
+                <div class="checkbton">
+                    <div class="hamburger-lines">
                         <span class="line line1"></span>
                         <span class="line line2"></span>
                         <span class="line line3"></span>
+                    </div>
                 </div>
                 <ul class="menu">
                     <li><a id="mujer">Mujer</a></li>

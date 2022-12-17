@@ -2,70 +2,14 @@
 
 @media screen and (max-width: 824px) {
 
-    /* header{
-        display: inline;
-    }
+    /* menu hamburguesa */
 
-    header nav ul{
-        display: inline;
-    }
 
-    header nav ul li{
-        text-align: center;
-    }
 
-    header img{
-        margin-left: 40%;
-        margin-bottom: -100px;
-    }
-
-    header .carrito-login{
+    .products-container{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    } */
-
-    /* .menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
         flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgba(0, 0, 0, 0.05);
     }
-
-    .menu.active {
-        left: 0;
-    }
-
-    .nav li {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger-lines {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    } */
 
     .singleProduct-container{
         display: flex;
