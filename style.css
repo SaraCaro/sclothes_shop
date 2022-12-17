@@ -154,7 +154,7 @@ header i{
 	width: 700px;
 }
 
-/* @keyframes slide {
+@keyframes slide {
 	0% {margin-left: 0;}
 	20% {margin-left: 0;}
 	
@@ -166,9 +166,8 @@ header i{
 	
 	75% {margin-left: -300%;}
 	100% {margin-left: -300%;}
-} */
+}
 
-/* carrusel mas rapido */
 
 .slider-frame ul {
     animation: slide 15s infinite alternate ease-in-out;
@@ -189,7 +188,6 @@ header i{
 #banner img{
     grid-area: 1 / 1 / 2 / 2;
     width: 300px;
-    /* box-shadow:  0 0 10px 0 rgba(0,0,0);; */
     box-shadow: -1px 7px 28px -7px rgba(0,0,0,0.75);
     border-radius: 8px;
 }
@@ -386,6 +384,11 @@ footer i:hover{
     padding-top: 40px;
     gap: 5rem;
     cursor: pointer;
+}
+
+.product:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 #sort{
